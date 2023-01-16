@@ -144,7 +144,7 @@
         .prodBox {
             display: flex;
             width: 200px;
-            height: 300px;
+            height: 330px;
             border-radius: 2px;
             /* padding: 10px; */
             border: 3px solid gray;
@@ -208,7 +208,7 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+            grid-template-columns: repeat(4, 1fr); /* 3 columns with equal width */
             grid-template-rows: repeat(2, minmax(200px, 1fr)); /* 2 rows with a minimum height of 200px */
             grid-gap: 50px; /* add a 20px gap between the grid items */
             row-gap: 30px;
@@ -218,6 +218,7 @@
         .tab {
             tab-size: 4;
             margin: 10px 0;
+            margin-left: -10%;
 
         }
 
@@ -241,30 +242,43 @@
         }
         .large{
             font-size: xx-large;
+            align-self: center;
+            display: inline;
+            margin-left: -20%;
         }
         
         .filters{
             display:block;
             
             width: 200px;
-            height: 750px;
+            height: 600px;
             border-radius: 2px;
             /* padding: 10px; */
+            
             border: 4px solid gray;
             text-align: center;
             justify-content: center;
             
             margin: 0 auto;
-            
+            margin-top: -20%;
+            margin-right: 8%;
+            margin-left: 2%;
         }
         .grid-item {
             margin: 0 auto;
+            display: flex;
+            
+            justify-content: center;
         }
         .mainPage {
             display:inline-flex;
-            
+            align-items: center;
             margin-top: 20px;
         }
+        .item-photo{
+            margin-left: -14%;
+        }
+        
     </style>
 </head>
 
@@ -334,7 +348,20 @@
         <div class="grid-item">
             <div class="prodBox">
                 <ul class="prod">
-                    <li><img src="basicBox.png"></li>
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                    <li>
+                        <h3>Product title</h3>
+                    </li>
+                    <li class="stars">
+                        <h3>★★★★★</h3>
+                    </li>
+                    <li class="stars">99,99$</li>
+                </ul>
+            </div>
+        </div><div class="grid-item">
+            <div class="prodBox">
+                <ul class="prod">
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
                     <li>
                         <h3>Product title</h3>
                     </li>
@@ -348,7 +375,7 @@
         <div class="grid-item">
             <div class="prodBox">
                 <ul class="prod">
-                    <li><img src="basicBox.png"></li>
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
                     <li>
                         <h3>Product title</h3>
                     </li>
@@ -362,7 +389,7 @@
         <div class="grid-item">
             <div class="prodBox">
                 <ul class="prod">
-                    <li><img src="basicBox.png"></li>
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
                     <li>
                         <h3>Product title</h3>
                     </li>
@@ -376,7 +403,7 @@
         <div class="grid-item">
             <div class="prodBox">
                 <ul class="prod">
-                    <li><img src="basicBox.png"></li>
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
                     <li>
                         <h3>Product title</h3>
                     </li>
@@ -390,7 +417,7 @@
         <div class="grid-item">
             <div class="prodBox">
                 <ul class="prod">
-                    <li><img src="basicBox.png"></li>
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
                     <li>
                         <h3>Product title</h3>
                     </li>
@@ -404,7 +431,7 @@
         <div class="grid-item">
             <div class="prodBox">
                 <ul class="prod">
-                    <li><img src="basicBox.png"></li>
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
                     <li>
                         <h3>Product title</h3>
                     </li>
@@ -418,7 +445,7 @@
         <div class="grid-item">
             <div class="prodBox">
                 <ul class="prod">
-                    <li><img src="basicBox.png"></li>
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
                     <li>
                         <h3>Product title</h3>
                     </li>
@@ -432,7 +459,7 @@
         <div class="grid-item">
             <div class="prodBox">
                 <ul class="prod">
-                    <li><img src="basicBox.png"></li>
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
                     <li>
                         <h3>Product title</h3>
                     </li>
@@ -443,6 +470,49 @@
                 </ul>
             </div>
         </div>
+        <div class="grid-item">
+            <div class="prodBox">
+                <ul class="prod">
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                    <li>
+                        <h3>Product title</h3>
+                    </li>
+                    <li class="stars">
+                        <h3>★★★★★</h3>
+                    </li>
+                    <li class="stars">99,99$</li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="prodBox">
+                <ul class="prod">
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                    <li>
+                        <h3>Product title</h3>
+                    </li>
+                    <li class="stars">
+                        <h3>★★★★★</h3>
+                    </li>
+                    <li class="stars">99,99$</li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="prodBox">
+                <ul class="prod">
+                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                    <li>
+                        <h3>Product title</h3>
+                    </li>
+                    <li class="stars">
+                        <h3>★★★★★</h3>
+                    </li>
+                    <li class="stars">99,99$</li>
+                </ul>
+            </div>
+        </div>
+        
 
 
 
