@@ -12,7 +12,9 @@
             margin: 0;
             font-family: "Source Sans Pro", sans-serif;
         }
+
         .header {
+            height: 150px;
             padding: 0 45px;
             background-color: #283593;
             color: #FFF;
@@ -65,7 +67,7 @@
             padding: 10px 60px;
             border: 5px solid rgb(177, 37, 37);
             position: absolute;
-            
+
             text-align: center;
         }
 
@@ -124,14 +126,17 @@
             display: block;
 
         }
+
         label {
             font-size: large;
             font-weight: 600;
         }
-        .list{
+
+        .list {
             justify-content: center;
             display: flex;
         }
+
         .inputSubmit {
             width: 100px;
             display: inline-block;
@@ -142,17 +147,33 @@
             border-radius: 8px;
             font-size: 1.18rem;
             margin-left: 37%;
-            
+
         }
 
+        .zoom {
+            background-color: green;
+            transition: transform .2s;
+            /* Animation */
+            width: 120px;
+            margin: 0 auto;
+        }
+
+        .zoom:hover {
+            transform: scale(1.5);
+            /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
-        <h1>OurLogo</h1>
+        <div class="header">
+            <div class="header">
+                <a href="productSearch.html"> <img src="logo.png" class="zoom" width="120px">
+                </a>
+            </div>
+        </div>
 
-        
         <ul class="nav">
             <li><a href="#">My Account</a></li>
             <li><a href="shoppingCart.html">My Cart</a></li>
@@ -165,7 +186,7 @@
             <t>Create a new item in my marketplace</t>
         </div>
 
-        
+
         <div class="list">
             <form>
                 <label for="Image">Insert image:</label>
@@ -178,8 +199,8 @@
                 <textarea type="text" id="Category"></textarea><br>
                 <label for="Price">The price of the item:</label>
                 <input type="text" id="Price" class="input"><br>
-                <input type="submit"  value="Submit" class="inputSubmit">
-                
+                <input type="submit" value="Submit" class="inputSubmit">
+
             </form>
         </div>
 

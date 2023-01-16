@@ -18,6 +18,7 @@
             padding: 0 45px;
             background-color: #283593;
             color: #FFF;
+            height: 150px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -141,6 +142,19 @@
 
         }
 
+        .zoom {
+            background-color: green;
+            transition: transform .2s;
+            /* Animation */
+            width: 120px;
+            margin: 0 auto;
+        }
+
+        .zoom:hover {
+            transform: scale(1.5);
+            /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+
         .prodBox {
             display: flex;
             width: 200px;
@@ -208,9 +222,12 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 3 columns with equal width */
-            grid-template-rows: repeat(2, minmax(200px, 1fr)); /* 2 rows with a minimum height of 200px */
-            grid-gap: 50px; /* add a 20px gap between the grid items */
+            grid-template-columns: repeat(4, 1fr);
+            /* 3 columns with equal width */
+            grid-template-rows: repeat(2, minmax(200px, 1fr));
+            /* 2 rows with a minimum height of 200px */
+            grid-gap: 50px;
+            /* add a 20px gap between the grid items */
             row-gap: 30px;
         }
 
@@ -225,6 +242,7 @@
         h4 {
             margin: -10px 0;
         }
+
         .box1 {
             display: inline-block;
             width: 40px;
@@ -233,52 +251,56 @@
             /* padding: 10px; */
             border: 1px solid gray;
             text-align: center;
-            
+
         }
-        .lite{
+
+        .lite {
             font-weight: 300;
             font-size: larger;
             align-self: center;
         }
-        .large{
+
+        .large {
             font-size: xx-large;
             align-self: center;
             display: inline;
             margin-left: -20%;
         }
-        
-        .filters{
-            display:block;
-            
+
+        .filters {
+            display: block;
+
             width: 200px;
             height: 600px;
             border-radius: 2px;
             /* padding: 10px; */
-            
+
             border: 4px solid gray;
             text-align: center;
             justify-content: center;
-            
+
             margin: 0 auto;
             margin-top: -20%;
             margin-right: 8%;
             margin-left: 2%;
         }
+
         .grid-item {
             margin: 0 auto;
             display: flex;
-            
+
             justify-content: center;
         }
+
         .mainPage {
-            display:inline-flex;
+            display: inline-flex;
             align-items: center;
             margin-top: 20px;
         }
-        .item-photo{
+
+        .item-photo {
             margin-left: -14%;
         }
-        
     </style>
 </head>
 
@@ -288,7 +310,9 @@
         rel="stylesheet">
 
     <div class="header">
-        <h1>OurLogo</h1>
+        <div class="header">
+            <img src="logo.png" class="zoom" width="120px">
+        </div>
 
         <div>
             <form method="get" action="#">
@@ -328,199 +352,213 @@
                 <li><input type="checkbox" style="margin-left: -50px;"> Brand 4</li>
             </ul>
             <h3>Price Range</h3>
-            <ul >
-                <li><form><input class="box1" type="text" placeholder="Min"></form></li>
+            <ul>
+                <li>
+                    <form><input class="box1" type="text" placeholder="Min"></form>
+                </li>
                 <span style="width: 14px"></span>
-                <li><form><input class="box1" type="text" placeholder="Max"></form></li></ul>
+                <li>
+                    <form><input class="box1" type="text" placeholder="Max"></form>
+                </li>
+            </ul>
             <h3>Review Score</h3>
             <ul style="display: block;margin: -10px 0%;">
-                <li><h3 class="large">★★★★☆</h3></li>
-                <li><h3 class="large">★★★☆☆</h3></li>
-                <li><h3 class="large">★★☆☆☆</h3></li>
-                <li><h3 class="large">★☆☆☆☆</h3></li>
+                <li>
+                    <h3 class="large">★★★★☆</h3>
+                </li>
+                <li>
+                    <h3 class="large">★★★☆☆</h3>
+                </li>
+                <li>
+                    <h3 class="large">★★☆☆☆</h3>
+                </li>
+                <li>
+                    <h3 class="large">★☆☆☆☆</h3>
+                </li>
             </ul>
-    
-        
-        </div>
-    
-
-    <div class="grid-container">
-        <div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div><div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="prodBox">
-                <ul class="prod">
-                    <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
-                    <li>
-                        <h3>Product title</h3>
-                    </li>
-                    <li class="stars">
-                        <h3>★★★★★</h3>
-                    </li>
-                    <li class="stars">99,99$</li>
-                </ul>
-            </div>
-        </div>
-        
 
 
+        </div>
 
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="prodBox">
+                    <ul class="prod">
+                        <li><img class="item-photo" width="150px" src="basicBox1.png"></li>
+                        <li>
+                            <h3>Product title</h3>
+                        </li>
+                        <li class="stars">
+                            <h3>★★★★★</h3>
+                        </li>
+                        <li class="stars">99,99$</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+        </div>
     </div>
-    </div>
-    
 
-    
+
+
 
 
 

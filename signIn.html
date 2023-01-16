@@ -17,6 +17,7 @@
 
         .header {
             padding: 0 45px;
+            height: 150px;
             background-color: #283593;
             color: #FFF;
             display: flex;
@@ -140,6 +141,26 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        .headerimg {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
+
+        .zoom {
+            background-color: green;
+            transition: transform .2s;
+            /* Animation */
+            width: 120px;
+            margin: 0 auto;
+        }
+
+        .zoom:hover {
+            transform: scale(1.5);
+            /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
     </style>
 </head>
 
@@ -147,10 +168,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 
-    <div class="header">
-        <h1>OurLogo</h1>
-
-    </div>
+        <div class="header">
+            <div class="header">
+                <a href="productSearch.html"> <img src="logo.png" class="zoom" width="120px">
+                </a>
+            </div>
+        </div>
 
 
     <div class="inp">
@@ -201,12 +224,12 @@
             <label for="about">About/Bio:</label>
             <textarea id="about" name="about" required></textarea>
             <br>
-            <center><input type="submit" class="button" value="Create Account">
+            <center><a href="login.html"><input type="submit" class="button" value="Create Account"></a>
                 <h4><a href="login.html">Login instead</a></h4>
                 <h5 class="lite">Your personal data is processed within the scope of
                     the Clarification Text. By pressing one of the
                     "Become a Member" or "Social Account" buttons,
-                    you confirm The Terms and Conditions</h5>
+                    you confirm The <a href="https://www.youtube.com/shorts/I0ld-0OKBLM">Terms and Conditions</a></h5>
             </center>
 
         </form>

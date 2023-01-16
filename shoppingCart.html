@@ -8,6 +8,19 @@
     <title>CSS Grid example</title>
 
     <style>
+        .zoom {
+            background-color: green;
+            transition: transform .2s;
+            /* Animation */
+            width: 120px;
+            margin: 0 auto;
+        }
+
+        .zoom:hover {
+            transform: scale(1.5);
+            /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+
         body {
             margin: 0;
             font-family: "Source Sans Pro", sans-serif;
@@ -17,6 +30,7 @@
             padding: 0 45px;
             background-color: #283593;
             color: #FFF;
+            height: 150px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -143,7 +157,7 @@
         .topsearch {
             overflow: hidden;
             background-color: #283593;
-            
+
 
         }
 
@@ -201,7 +215,12 @@
         rel="stylesheet">
 
     <div class="header">
-        <h1>OurLogo</h1>
+        <div class="header">
+            <div class="header">
+                <a href="productSearch.html"> <img src="logo.png" class="zoom" width="120px">
+                </a>
+            </div>
+        </div>
 
         <div>
             <form method="get" action="#">
