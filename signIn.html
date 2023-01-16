@@ -11,6 +11,8 @@
         body {
             margin: 0;
             font-family: "Source Sans Pro", sans-serif;
+            background-color: hsl(212, 83%, 81%);
+
         }
 
         .header {
@@ -22,21 +24,22 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        
-        .bigbox{
-            display:block;
-            
+
+        .bigbox {
+            display: block;
+
             width: 400px;
             height: 550px;
             border-radius: 2px;
-            
+
             border: 4px solid gray;
             text-align: center;
             justify-content: center;
-            
+
             margin-top: 250px;
             margin-left: 40%;
         }
+
         input[type=text] {
             padding: 12px 20px;
             margin: 28px 0;
@@ -45,6 +48,7 @@
             border: 2px solid #ccc;
             border-radius: 4px;
         }
+
         .button {
             background-color: #3949ab;
             color: #FFF;
@@ -56,7 +60,8 @@
             margin-bottom: -19px;
             display: inline-block;
         }
-        .lite{
+
+        .lite {
             font-weight: 100;
             text-align: center;
             text-align: justify;
@@ -64,6 +69,44 @@
 
         }
 
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .radio {
+            display: flex;
+        }
+
+        form {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 5px dashed darkcyan;
+            border-radius: 5px;
+        }
+
+        label {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        textarea {
+            width: 90%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 
@@ -72,30 +115,66 @@
         rel="stylesheet">
 
     <div class="header">
-        <h1>OurLogo</h1>   
-        
+        <h1>OurLogo</h1>
+
     </div>
 
-    <div class="bigbox">
+
+    <div class="inp">
         <form>
-            <div class="input1">
-                <input type="text" placeholder="Username">
-                <input type="text" placeholder="E-mail address">
-            </div>
-        </form>
+            <label for="userID">User ID:</label>
+            <input type="text" id="userID" name="userID" required><br>
 
-        <button id="completeTransaction" type="submit" class="button">Create Account</button>
-        <h3 ><a href="login.html">Login instead</a></h3>
-        <h5 class="lite">Your personal data is processed within the scope of 
-            the Clarification Text. By pressing one of the 
-            "Become a Member" or "Social Account" buttons, 
-            you confirm...</h5>
-        
-        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required><br>
+
+            <label for="zipCode">ZIP Code:</label>
+            <input type="text" id="zipCode" name="zipCode" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <div class="radio">
+                <label for="gender">Gender:</label><br>
+                <br></br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other" required>
+                <label for="other">Other</label>
+
+            </div>
+            <label for="language">Language:</label>
+            <input type="text" id="language" name="language" required><br>
+
+            <label for="about">About/Bio:</label>
+            <textarea id="about" name="about" required></textarea>
+            <br>
+            <center><input type="submit" class="button" value="Create Account">
+                <h4><a href="login.html">Login instead</a></h4>
+                <h5 class="lite">Your personal data is processed within the scope of
+                    the Clarification Text. By pressing one of the
+                    "Become a Member" or "Social Account" buttons,
+                    you confirm The Terms and Conditions</h5>
+            </center>
+
+        </form>
     </div>
 
 
-    
+
+
+
 </body>
 
 </html>
