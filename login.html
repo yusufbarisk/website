@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid example</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Source Sans Pro", sans-serif;
+            background-color: hsl(212, 83%, 81%);
+
+        }
+
+        .header {
+            padding: 0 45px;
+            background-color: #283593;
+            color: #FFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .bigbox{
+            display:block;
+            
+            width: 400px;
+            height: 330px;
+            border-radius: 2px;
+            
+            border: 4px solid gray;
+            text-align: center;
+            justify-content: center;
+            
+            margin-top: 250px;
+            margin-left: 40%;
+        }
+        input[type=text] {
+            padding: 12px 20px;
+            margin: 28px 0;
+            margin-bottom: 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .button {
+            background-color: #3949ab;
+            color: #FFF;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.18rem;
+            margin: 15px;
+            margin-bottom: -19px;
+            display: inline-block;
+        }
+        .lite{
+            font-weight: 100;
+            text-align: center;
+            text-align: justify;
+            margin: 15px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <div class="header">
+        <h1>OurLogo</h1>   
+        
+    </div>
+
+    <div class="bigbox">
+        <form>
+            <div class="input1">
+                <input type="text" placeholder="e-mail address or username">
+                <input type="text" placeholder="password">
+            </div>
+        </form>
+
+        <button id="completeTransaction" type="submit" class="button">Login</button>
+        <h3 ><a href="signIn.html">Sign Up</a></h3>
+        <h5 class="lite">Your personal data is processed within the scope of 
+            the Clarification Text. By pressing one of the 
+            "Become a Member" or "Social Account" buttons, 
+            you confirm...</h5>
+        
+        
+    </div>
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid example</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Source Sans Pro", sans-serif;
+        }
+        .header {
+            padding: 0 45px;
+            background-color: #283593;
+            color: #FFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: #FFF;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease-out;
+        }
+
+        .nav a:hover {
+            color: #c5cae9;
+            transform: rotate(6deg);
+        }
+
+        .nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav li {
+            margin-left: 20px;
+        }
+
+
+
+        .button {
+            background-color: #3949ab;
+            color: #FFF;
+            text-decoration: none;
+            padding: 10px 50px;
+            border-radius: 8px;
+            font-size: 1.18rem;
+            margin-right: 5mm;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 5mm;
+        }
+
+        .box {
+            padding: 10px 60px;
+            border: 5px solid rgb(177, 37, 37);
+            position: absolute;
+            
+            text-align: center;
+        }
+
+        .title {
+            text-align: center;
+            margin: 20px;
+            font-size: 7mm;
+        }
+
+        .input {
+            width: 400px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            margin-top: 100px;
+            margin-right: 100px;
+        }
+
+        label[for='Image'] {
+            grid-row: 1;
+        }
+
+        img {
+            grid-row: 2;
+        }
+
+        textarea {
+            width: 400px;
+            height: 100px;
+        }
+
+        .inputSubmit {
+            width: 100px;
+        }
+
+        input[type=text] {
+            padding: 12px 20px;
+            margin: 28px 0;
+            margin-bottom: 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .button {
+            background-color: #3949ab;
+            color: #FFF;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.18rem;
+            margin: 15px;
+            display: block;
+
+        }
+        label {
+            font-size: large;
+            font-weight: 600;
+        }
+        .list{
+            justify-content: center;
+            display: flex;
+        }
+        .inputSubmit {
+            width: 100px;
+            display: inline-block;
+            background-color: #3949ab;
+            color: #FFF;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.18rem;
+            margin-left: 37%;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>OurLogo</h1>
+
+        
+        <ul class="nav">
+            <li><a href="#">My Account</a></li>
+            <li><a href="shoppingCart.html">My Cart</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+    <div class="container">
+
+        <div class="title">
+            <t>Create a new item in my marketplace</t>
+        </div>
+
+        
+        <div class="list">
+            <form>
+                <label for="Image">Insert image:</label>
+                <img style="margin-left: -30px;" src="addItemPlaceholder.png" id="Image"></img><br>
+                <label for="Category">Select category:</label>
+                <input type="text" id="Category" class="input"><br>
+                <label for="Title">Item title:</label>
+                <input type="text" id="Title" class="input"><br>
+                <label for="Description">Description of the item:</label>
+                <textarea type="text" id="Category"></textarea><br>
+                <label for="Price">The price of the item:</label>
+                <input type="text" id="Price" class="input"><br>
+                <input type="submit"  value="Submit" class="inputSubmit">
+                
+            </form>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid example</title>
+
+    <style>
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.header {
+  padding: 0 45px;
+  background-color: #283593;
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.button {
+  background-color: #3949ab;
+  color: #FFF;
+  text-decoration: none;
+  padding: 10px 50px;
+  border-radius: 8px;
+  font-size: 1.18rem;
+  margin-right: 5mm;
+  position: absolute; 
+  top: 0; 
+  right: 0;
+  margin-top: 5mm;
+}
+
+.box {
+    width: 500px;
+    height: 100px;
+    border: 0px solid gray;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10mm;
+}
+
+.title {
+    text-align: center;
+    margin-top: 5mm;
+    font-size: 7mm;
+}
+
+.box p {
+    text-align: center;
+}
+
+.attributes {
+    text-align: left;
+    margin-left: 55mm;
+
+}
+
+.attributes img{
+    text-align: left;
+    margin-top: 15mm;
+}
+
+.attributeBox{
+        background-color: #4654e1;
+        width: 300px;
+        height: 44px;
+        float: right;
+}
+.container{
+    align-items: flex-start;
+    display: block;
+    margin: 30% auto;
+    
+
+}
+.input {
+    width: 400px;
+    margin: 200px;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="title">
+            <t>Create a new item in my marketplace</t>
+        </div>
+    
+        <div class="button">My account</div>
+    
+        <div class="box" style="margin-top: 30px;">
+            <img src="addItemPlaceholder.png"></img>
+        </div>
+        <form><input type="text" class="input"> </form>
+    
+        <div class="attributes">
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>
