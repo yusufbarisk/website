@@ -69,13 +69,6 @@
 
         }
 
-        input[type="radio"] {
-            margin-right: 10px;
-        }
-
-        .radio {
-            display: flex;
-        }
 
         form {
             width: 60%;
@@ -103,6 +96,46 @@
         }
 
 
+        .gender-selector {
+            display: flex;
+            justify-content: center;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"]+label {
+            position: relative;
+            cursor: pointer;
+            padding: 12px;
+            margin: 0 10px;
+        }
+
+        input[type="radio"]+label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #16355e;
+            background-color: transparent;
+            transition: all 0.2s ease;
+        }
+
+        input[type="radio"]:checked+label:before {
+            width: 10px;
+            height: 10px;
+            border-width: 4px;
+            background-color: #0e4763;
+        }
+
+        input[type="radio"]+label .radio-label {
+            position: relative;
+            padding-left: 30px;
+        }
 
         input[type="submit"]:hover {
             background-color: #45a049;
@@ -144,14 +177,22 @@
             <input type="email" id="email" name="email" required><br>
 
             <div class="radio">
-                <label for="gender">Gender:</label><br>
-                <br></br>
-                <input type="radio" id="male" name="gender" value="male" required>
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female" required>
-                <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="other" required>
-                <label for="other">Other</label>
+                <label>Gender:</label>
+                <div class="gender-selector">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">
+                        <span class="radio-label">Male</span>
+                    </label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">
+                        <span class="radio-label">Female</span>
+                    </label>
+                    <input type="radio" id="other" name="gender" value="other" required>
+                    <label for="other">
+                        <span class="radio-label">Other</span>
+                    </label>
+                </div>
+                <br>
 
             </div>
             <label for="language">Language:</label>

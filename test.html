@@ -88,29 +88,98 @@ body {
 }
 
 
+form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+label {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.gender-selector {
+  display: flex;
+  justify-content: center;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  cursor: pointer;
+  padding: 12px;
+  margin: 0 10px;
+}
+
+input[type="radio"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #4CAF50;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+input[type="radio"]:checked + label:before {
+  width: 10px;
+  height: 10px;
+  border-width: 4px;
+  background-color: #4CAF50;
+}
+
+input[type="radio"] + label .radio-label {
+  position: relative;
+  padding-left: 30px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
 
 
     </style>
 </head>
 <body>
-    <div class="container">
-
-        <div class="title">
-            <t>Create a new item in my marketplace</t>
+    <form>
+        <label>Gender:</label>
+        <div class="gender-selector">
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">
+            <span class="radio-label">Male</span>
+          </label>
+          <input type="radio" id="female" name="gender" value="female" required>
+          <label for="female">
+            <span class="radio-label">Female</span>
+          </label>
+          <input type="radio" id="other" name="gender" value="other" required>
+          <label for="other">
+            <span class="radio-label">Other</span>
+          </label>
         </div>
-    
-        <div class="button">My account</div>
-    
-        <div class="box" style="margin-top: 30px;">
-            <img src="addItemPlaceholder.png"></img>
-        </div>
-        <form><input type="text" class="input"> </form>
-    
-        <div class="attributes">
-            
-        </div>
-
-    </div>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+      
     
 </body>
 </html>
