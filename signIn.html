@@ -6,162 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid example</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: "Source Sans Pro", sans-serif;
-            background-color: hsl(212, 83%, 81%);
-
-        }
-
-        .header {
-            padding: 0 45px;
-            height: 150px;
-            background-color: #283593;
-            color: #FFF;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .bigbox {
-            display: block;
-
-            width: 400px;
-            height: 550px;
-            border-radius: 2px;
-
-            border: 4px solid gray;
-            text-align: center;
-            justify-content: center;
-
-            margin-top: 250px;
-            margin-left: 40%;
-        }
-
-        input[type=text] {
-            padding: 12px 20px;
-            margin: 28px 0;
-            margin-bottom: 0;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .button {
-            background-color: #3949ab;
-            color: #FFF;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 1.18rem;
-            margin: 15px;
-            margin-bottom: -19px;
-            display: inline-block;
-        }
-
-        .lite {
-            font-weight: 100;
-            text-align: center;
-            text-align: justify;
-            margin: 15px;
-
-        }
-
-
-        form {
-            width: 60%;
-            margin: 0 auto;
-            padding: 20px;
-            border: 5px dashed darkcyan;
-            border-radius: 5px;
-        }
-
-        label {
-            font-size: 1.2em;
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        input[type="text"],
-        input[type="password"],
-        input[type="email"],
-        textarea {
-            width: 90%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-
-        .gender-selector {
-            display: flex;
-            justify-content: center;
-        }
-
-        input[type="radio"] {
-            display: none;
-        }
-
-        input[type="radio"]+label {
-            position: relative;
-            cursor: pointer;
-            padding: 12px;
-            margin: 0 10px;
-        }
-
-        input[type="radio"]+label:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 2px solid #16355e;
-            background-color: transparent;
-            transition: all 0.2s ease;
-        }
-
-        input[type="radio"]:checked+label:before {
-            width: 10px;
-            height: 10px;
-            border-width: 4px;
-            background-color: #0e4763;
-        }
-
-        input[type="radio"]+label .radio-label {
-            position: relative;
-            padding-left: 30px;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        .headerimg {
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 5px;
-            width: 150px;
-        }
-
-        .zoom {
-            background-color: green;
-            transition: transform .2s;
-            /* Animation */
-            width: 120px;
-            margin: 0 auto;
-        }
-
-        .zoom:hover {
-            transform: scale(1.5);
-            /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-        }
-    </style>
+    <link rel="stylesheet" href="./css/signIn.css">
+    
 </head>
 
 <body>
@@ -182,7 +28,12 @@
             <input type="text" id="userID" name="userID" required><br>
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br>
+            <h4 class="alt" style="display: inline;"> Must be 12+ characters long and include at least:<br>1 
+                Capital letter<br>1 number<br>1 special character<br></h4>
+            <input type="password" id="password" name="password"
+             pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}"
+             min="12"
+            required><br>
 
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br>
